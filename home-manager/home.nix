@@ -14,9 +14,9 @@
 
   home.pointerCursor = {
     gtk.enable = true;
-    package = pkgs.material-cursors;
-    name = "Material Cursors";
-    size = 16;
+    package = pkgs.nordzy-cursor-theme;
+    name = "Nordzy-cursors";
+    size = 20;
   };
 
   gtk = {

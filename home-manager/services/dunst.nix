@@ -14,24 +14,24 @@
         height = 300;
         offset = "30x30";
         iconTheme =  "Numix-Circle";
-        transparency = 10;
+        transparency = 50;
 
-        background = "#${COLORS.BG.BG0}";
-        foreground = "#${COLORS.FG.DEFAULT}";
+        background = "#${COLORS.BG.BG0}e6";
+        foreground = "#${COLORS.FG.DEFAULT}e6";
 
-        frame_color = "#${COLORS.FG.DEFAULT}";
+        frame_color = "#${COLORS.FG.DEFAULT}e6";
       };
 
       urgency_low = {
-        frame_color = "#${COLORS.FG.GREEN}";
+        frame_color = "#${COLORS.FG.GREEN}e6";
       };
 
       urgency_medium = {
-        frame_color = "#${COLORS.FG.YELLOW}";
+        frame_color = "#${COLORS.FG.YELLOW}e6";
       };
 
       urgency_critical = {
-        frame_color = "#${COLORS.FG.RED}";
+        frame_color = "#${COLORS.FG.RED}e6";
       };
     };
   };

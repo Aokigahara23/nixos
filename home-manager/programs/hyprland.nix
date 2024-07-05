@@ -38,7 +38,6 @@
       windowrulev2 = [
         "center, floating:1"
         "maxsize 800 500, floating:1"
-        "size 640 400, floating:1"
         "workspace 1, class:(firefox)"
         "workspace 4, class:(org.telegram.desktop)"
         "opacity 1.0 1.0 override, class:^(firefox),title:(YouTube)"

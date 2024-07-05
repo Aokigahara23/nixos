@@ -8,7 +8,8 @@
       "window.zoomLevel" = 4;
       "window.menuBarVisibility" = "hidden";
       "security.allowedUNCHosts" = ["wsl.localhost"];
-      "workbench.colorTheme" = "Catppuccin Mocha";
+      "workbench.colorTheme" = "Everforest Dark";
+      "everforest.darkContrast" = "hard";
       "window.customMenuBarAltFocus" = false;
       "window.enableMenuBarMnemonics" = false;
       "window.titleBarStyle" = "native";
@@ -50,7 +51,7 @@
       "ruff.fixAll" = false;
       "isort.check" = true;
       "isort.importStrategy" = "fromEnvironment";
-      "workbench.iconTheme" = "catppuccin-icons";
+      "workbench.iconTheme" = "Material Icon Theme";
       "catppuccin.italicKeywords" = false;
       "files.associations" = {
         "*.yml" = "ansible";
@@ -230,13 +231,18 @@
         gruntfuggly.todo-tree
         ms-vscode.cmake-tools
         esbenp.prettier-vscode
-        catppuccin.catppuccin-vsc
-        catppuccin.catppuccin-vsc-icons
+        pkief.material-icon-theme
         llvm-vs-code-extensions.vscode-clangd
       ]
       ++
       pkgs.vscode-utils.extensionsFromVscodeMarketplace
       [
+        {
+          name = "Everforest";
+          publisher = "sainnhe";
+          version = "0.3.0";
+          sha256 = "sha256-nZirzVvM160ZTpBLTimL2X35sIGy5j2LQOok7a2Yc7U=";
+        }
       ];
 
     keybindings = [
