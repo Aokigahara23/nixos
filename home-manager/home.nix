@@ -14,8 +14,8 @@
 
   home.pointerCursor = {
     gtk.enable = true;
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Ice";
+    package = pkgs.material-cursors;
+    name = "Material Cursors";
     size = 16;
   };
 
@@ -23,8 +23,8 @@
     enable = true;
 
     theme = {
-      package = pkgs.kanagawa-gtk-theme;
-      name = "Kanagawa-BL";
+      package = pkgs.everforest-gtk-theme;
+      name = "Everforest-Dark-BL";
     };
 
     iconTheme = {
@@ -33,8 +33,8 @@
     };
 
     font = {
-      name = "Sans";
-      size = 11;
+      name = "Overpass Nerd Font";
+      size = 12;
     };
   };
 

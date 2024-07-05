@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, COLORS, ... }:
 
 {
   programs.waybar = {
@@ -11,7 +11,7 @@
       mainBar = {
         layer = "top";
         position = "top";
-        height = 37;
+        height = 40;
         margin = "15 15 0 15";
         output = [
           "eDP-2"
@@ -19,7 +19,7 @@
 
         modules-right = [ "hyprland/language" "bluetooth" "clock" ];
         modules-center = [ "hyprland/workspaces" ];
-        modules-left = [  "cpu" "memory" "temperature" "battery" "wireplumber" ];
+        modules-left = [  "cpu" "memory" "temperature" "battery" "wireplumber" "backlight" ];
 
         "hyprland/workspaces" = {
           format = "{icon}";
@@ -71,6 +71,11 @@
           max-length = 30;
         };
 
+        "backlight" = {
+            "format" = "{icon} {percent}%";
+            "format-icons" = ["" ""];
+        };
+
         "bluetooth" = {
           format = " {status}";
           format-disabled = " disconnected";
@@ -100,29 +105,29 @@
 
     style = ''
       * {
-        border-radius: 10;
+        border-radius: 10px;
         font-family: "JetbrainsMono Nerd Font" ;
         font-size: 15px;
         min-height: 10px;
       }
 
       window#waybar {
-        background: rgba(30, 31, 40, 0.9);
+        background: rgba(39, 46, 51, 0.9);
         border-radius: 10px;
-        border: 2px solid #E6C384;
+        border: 2px solid #${COLORS.FG.STATUS_LINE1};
         transition: none;
       }
 
       tooltip {
-        background: rgba(30, 31, 40, 0.5);
-        border: 2px solid #E6C384;
+        background: rgba(39, 46, 51, 0.9);
+        border: 2px solid #${COLORS.FG.STATUS_LINE1};
         border-radius: 5px;
         padding: 5px;
         text-shadow: none;
       }
 
       tooltip * {
-        color: #DCD7BA;
+        color: #${COLORS.FG.DEFAULT};
         text-shadow: none;
       }
 
@@ -137,10 +142,14 @@
       }
 
       #workspaces button {
-        color: #DCD7BA;
+        color: #${COLORS.FG.DEFAULT};
         padding-left: 10px;
         padding-right: 10px;
         margin: 0px;
+      }
+
+      #workspaces button.active {
+        color: #${COLORS.FG.STATUS_LINE1};
       }
 
       .modules-left *,
@@ -151,8 +160,48 @@
         margin-right: 5px;
 
         transition: none;
-        color: #DCD7BA;
+        color: #${COLORS.FG.DEFAULT};
         background: transparent;
+      }
+
+      #cpu {
+        color: #${COLORS.FG.RED};
+      }
+
+      #memory {
+        color: #${COLORS.FG.ORANGE};
+      }
+
+      #temperature {
+        color: #${COLORS.FG.BLUE};
+      }
+
+      #temperature.criticl {
+        color: #${COLORS.FG.RED};
+      }
+
+      #bluetooth.on {
+        color: #${COLORS.FG.BLUE};
+      }
+
+      #bluetooth.off {
+        color: #${COLORS.BG.BLUE};
+      }
+
+      #backlight {
+        color: #${COLORS.FG.YELLOW};
+      }
+    
+      #wireplumber {
+        color: #${COLORS.FG.PURPLE};
+      }
+      
+      #battery {
+        color: #${COLORS.FG.AQUA};
+      }
+
+      #clock {
+        color: #${COLORS.FG.ORANGE};
       }
     '';
   };

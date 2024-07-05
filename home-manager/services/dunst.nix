@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, COLORS, ... }:
 
 {
   services.dunst = {
@@ -14,11 +14,24 @@
         height = 300;
         offset = "30x30";
         iconTheme =  "Numix-Circle";
+        transparency = 10;
 
-        background = "#1F1F28";
-        foreground = "#DCD7BA";
+        background = "#${COLORS.BG.BG0}";
+        foreground = "#${COLORS.FG.DEFAULT}";
 
-        frame_color = "#E6C384";
+        frame_color = "#${COLORS.FG.DEFAULT}";
+      };
+
+      urgency_low = {
+        frame_color = "#${COLORS.FG.GREEN}";
+      };
+
+      urgency_medium = {
+        frame_color = "#${COLORS.FG.YELLOW}";
+      };
+
+      urgency_critical = {
+        frame_color = "#${COLORS.FG.RED}";
       };
     };
   };

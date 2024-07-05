@@ -1,4 +1,4 @@
-{ USER, ... }:
+{ USER, COLORS, ... }:
 
 {
   wayland.windowManager.hyprland = {
@@ -21,30 +21,40 @@
         gaps_out = 15;
         border_size = 2;
 
-        "col.active_border" = "rgb(E6C384)";
-        "col.inactive_border" = "rgb(363646)";
+        "col.active_border" = "rgb(${COLORS.FG.STATUS_LINE1})";
+        "col.inactive_border" = "rgb(${COLORS.BG.BG0})";
       };
 
       decoration = {
         rounding = 10;
+        drop_shadow = false;
       };
 
       windowrule = [
-        "float,^(pavucontrol-qt)$"
-        "workspace 3, ^(code)$"
+        "opacity 0.9 0.9,^(.+)$"
+        "float,^(pavucontrol)$"
+      ];
+
+      windowrulev2 = [
+        "center, floating:1"
+        "maxsize 800 500, floating:1"
+        "size 640 400, floating:1"
+        "workspace 1, class:(firefox)"
+        "workspace 4, class:(org.telegram.desktop)"
+        "opacity 1.0 1.0 override, class:^(firefox),title:(YouTube)"
+        "opacity 1.0 1.0 override, class:(kitty)"
       ];
 
       input = {
         kb_layout = "us,ru";
         kb_options = "caps:swapescape,grp:alt_shift_toggle";
-        follow_mouse = 0;
+        follow_mouse = 1;
         sensitivity = 0;
         touchpad = {
           natural_scroll = true;
           scroll_factor = "0.2";
         };
       };
-
 
       animations = {
         enabled = true;
@@ -67,6 +77,7 @@
         "$mod, W, killactive"
         "$mod, Q, exit"
         "$mod, S, exec, grim -g \"$(slurp -d)\" - | wl-copy"
+        "$mod, F, togglefloating"
         "ALT, space, exec, $menu"
 
         "$mod_CTRL, right, exec, brightnessctl set 10%+"
@@ -99,6 +110,11 @@
         "$mod SHIFT, 7, movetoworkspace, 7"
         "$mod SHIFT, 8, movetoworkspace, 8"
         "$mod SHIFT, 9, movetoworkspace, 9"
+      ];
+
+      bindm = [
+        "$mod, mouse:272, movewindow"
+        "$mod, mouse:273, resizewindow"
       ];
     };
   };

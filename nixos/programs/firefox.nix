@@ -31,15 +31,15 @@
           installation_mode = "force_installed";
         };
         "{446900e4-71c2-419f-a6a7-df9c091e268b}" = {
-	  install_url = "https://addons.mozilla.org/firefox/downloads/file/4307738/bitwarden_password_manager-2024.6.3.xpi";
+          install_url = "https://addons.mozilla.org/firefox/downloads/file/4307738/bitwarden_password_manager-2024.6.3.xpi";
           installation_mode = "force_installed";
         };
         "FirefoxColor@mozilla.com" = {
-	  install_url = "https://addons.mozilla.org/firefox/downloads/file/3643624/firefox_color-2.1.7.xpi";
+          install_url = "https://addons.mozilla.org/firefox/downloads/file/3643624/firefox_color-2.1.7.xpi";
           installation_mode = "force_installed";
         };
-        "{26690e10-862d-456f-8bf2-50117a3cb206}" = {
-	  install_url = "https://addons.mozilla.org/firefox/downloads/file/4201697/kanagawa_theme-1.0.xpi";
+        "{077f039d-66b1-4bc2-a649-a8cb2ff35f66}" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/file/4314723/forest23_everforest_dark_hard-1.0.xpi";
           installation_mode = "force_installed";
         };
       };

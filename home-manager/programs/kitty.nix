@@ -18,6 +18,6 @@
       background_opacity = "0.9";
     };
 
-    theme = "Kanagawa";
+    theme = "Everforest Dark Hard";
   };
 }

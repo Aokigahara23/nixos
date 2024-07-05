@@ -1,4 +1,4 @@
-{ pkgs, USER, ... }:
+{ pkgs, USER, COLORS, ... }:
 
 {
   programs.rofi = {
@@ -29,14 +29,14 @@
 
   xdg.configFile."rofi/custom.rasi".text = ''
 	* {
-	    bg-col: #1F1F28;
-	    bg-col-light: #1F1F28;
-	    border-col: #E6C384;
-	    selected-col: #DCD7BA;
-	    blue: #9CABCA;
-	    fg-col: #DCD7BA;
-	    fg-col2: #1F1F28;
-	    grey: #727169;
+	    bg-col: #e6${COLORS.BG.BG0};
+	    bg-col-light: #e6${COLORS.BG.BG2};
+	    border-col: #e6${COLORS.FG.STATUS_LINE1};
+	    selected-col: #e6${COLORS.FG.YELLOW};
+	    blue: #e6${COLORS.FG.STATUS_LINE1};
+	    fg-col: #e6${COLORS.FG.DEFAULT};
+	    fg-col2: #e6${COLORS.BG.BG0};
+	    grey: #e6${COLORS.FG.GREY0};
 
 	    width: 600;
 	    font: "JetBrainsMono Nerd Font 14";

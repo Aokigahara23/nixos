@@ -4,12 +4,12 @@
   # something hard should go here
   imports = [
     ./hyprpaper.nix
+    ./starship.nix
     ./hyprland.nix
     ./hyprlock.nix
-    ./starship.nix
     ./firefox.nix
     ./waybar.nix
-    #./pkgs/vscode.nix
+    ./vscode.nix
     ./kitty.nix
     ./fish.nix
     ./rofi.nix
